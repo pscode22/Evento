@@ -16,11 +16,11 @@ export default function SearchForm() {
   return (
     <form onSubmit={handleSubmit} className="w-full lg:w-[36.25rem]">
       <input
-        className="w-full h-16 rounded-lg bg-white/[7%] px-6 outline-none ring-accent/50 transition focus:ring-2 focus:bg-white/10"
+        className="h-16 w-full rounded-lg bg-white/[7%] px-6 outline-none ring-accent/50 transition focus:bg-white/10 focus:ring-2"
         type="text"
         placeholder="Search events in any city..."
         value={searchText}
-        onChange={(e) => seatSearchText(e.target.value)}
+        onChange={e => seatSearchText(e.target.value)}
         spellCheck={false}
       />
     </form>
