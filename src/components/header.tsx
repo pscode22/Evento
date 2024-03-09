@@ -2,10 +2,10 @@
 
 import Link from 'next/link';
 import React from 'react';
-import Logo from './logo';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
+import Logo from './logo';
 
 const routes = [
   {
@@ -34,12 +34,12 @@ export default function Header() {
                 {
                   'text-white': activePathname === route.path,
                   'text-white/50': activePathname !== route.path,
-                }
+                },
               )}
             >
               <Link href={route.path}>{route.name}</Link>
               {activePathname === route.path && (
-                <motion.div layoutId='header-active-link' className="bg-accent h-1 w-full absolute bottom-0"></motion.div>
+                <motion.div layoutId="header-active-link" className="bg-accent h-1 w-full absolute bottom-0" />
               )}
             </li>
           ))}

@@ -3,5 +3,5 @@ export default function EventsPage() {
     <div>
       Events Page
     </div>
-  )
+  );
 }
