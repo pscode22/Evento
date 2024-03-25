@@ -1,3 +1,3 @@
-export default function EventsPage() {
-  return <div>Events Page</div>;
+export default function TermsConditionsPage() {
+  return <main>Terms & Conditions</main>;
 }
