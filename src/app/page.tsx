@@ -7,8 +7,8 @@ export default function Home() {
     <main className="flex flex-col items-center px-3 pt-36">
       <H1>Find events around you</H1>
       <p className="mb-12 mt-7 text-2xl opacity-75 lg:text-3xl">
-        Browse more than
-        <span className="font-bold italic text-accent underline">10,000 events</span> around you
+        Browse more than <span className="font-bold italic text-accent underline">10,000 events</span> around
+        you
       </p>
 
       <SearchForm />

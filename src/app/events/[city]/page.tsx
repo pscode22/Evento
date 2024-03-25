@@ -2,7 +2,6 @@ import EventsList from '@/components/events-list';
 import H1 from '@/components/h1';
 import { Suspense } from 'react';
 import Loading from './loading';
-import { Metadata } from 'next';
 import { capitalize } from '@/lib/utils';
 import { z } from 'zod';
 
@@ -15,14 +14,6 @@ type Props = {
 type EventsPageProps = Props & {
   searchParams: { [key: string]: string | string[] | undefined };
 };
-
-export function generateMetadata({ params }: Props): Metadata {
-  const city = params.city;
-
-  return {
-    title: city === 'all' ? 'All Events' : `Events in ${capitalize(city)}`,
-  };
-}
 
 const pageNumberSchema = z.coerce.number().int().positive().optional();
 
