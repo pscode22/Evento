@@ -20,7 +20,7 @@ export function generateMetadata({ params }: Props): Metadata {
   const city = params.city;
 
   return {
-    title: city === "all" ? "All Events" : `Events in ${capitalize(city)}`,
+    title: city === 'all' ? 'All Events' : `Events in ${capitalize(city)}`,
   };
 }
 
