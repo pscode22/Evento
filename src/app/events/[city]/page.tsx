@@ -4,6 +4,7 @@ import { Suspense } from 'react';
 import Loading from './loading';
 import { capitalize } from '@/lib/utils';
 import { z } from 'zod';
+import { Metadata } from 'next';
 
 type Props = {
   params: {
@@ -14,6 +15,14 @@ type Props = {
 type EventsPageProps = Props & {
   searchParams: { [key: string]: string | string[] | undefined };
 };
+
+export function generateMetadata({ params }: Props): Metadata {
+  const city = params.city;
+
+  return {
+    title: city === "all" ? "All Events" : `Events in ${capitalize(city)}`,
+  };
+}
 
 const pageNumberSchema = z.coerce.number().int().positive().optional();
 

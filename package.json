@@ -9,7 +9,8 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|tsx|json|md|mdx|css|yaml|yml)\"",
-    "prepare": "husky"
+    "prepare": "husky",
+    "postinstall": "prisma generate"
   },
   "prisma": {
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
@@ -22,6 +23,7 @@
     "next": "14.1.1",
     "react": "^18",
     "react-dom": "^18",
+    "server-only": "^0.0.1",
     "tailwind-merge": "^2.2.1",
     "zod": "^3.22.4"
   },
